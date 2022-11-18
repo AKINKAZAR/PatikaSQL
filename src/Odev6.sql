@@ -17,6 +17,6 @@ WHERE rental_rate = 0.99;
 
 4. film tablosunda bulunan filmlerin uzunluğu 150 dakikadan büyük olanlarına ait kaç farklı replacement_cost değeri vardır?
 
-SELECT COUNT(replacement_cost)
+SELECT COUNT(DISTINCT replacement_cost)
 FROM film
 WHERE LENGTH > 150;
