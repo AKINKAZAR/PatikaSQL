@@ -1,0 +1,14 @@
+1. city tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz LEFT JOIN sorgusunu yazınız.
+
+SELECT c.city, co.country FROM city c
+LEFT JOIN country co ON c.id = co.cityID;
+
+2. customer tablosu ile payment tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz RIGHT JOIN sorgusunu yazınız.
+
+SELECT p.payment_id, c.first_name, c.last_name FROM customer c
+RIGHT JOIN payment p ON c.payment_id = p.payment_id;
+
+3. customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz FULL JOIN sorgusunu yazınız.
+
+SELECT r.rental_id, c.first_name, c.last_name FROM customer c
+FULL OUTER JOIN rental r ON c.rental_id = r.rental_id;
